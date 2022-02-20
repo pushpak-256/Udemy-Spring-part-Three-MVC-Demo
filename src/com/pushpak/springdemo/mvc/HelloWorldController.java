@@ -15,7 +15,6 @@ public class HelloWorldController {
 	//controller-method to process the HTML form
 	@RequestMapping("/processForm")
 	public String processForm() {
-		System.out.println("processing form");
 		return "helloWorld";
 	}
 	
