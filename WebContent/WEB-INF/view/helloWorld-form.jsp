@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>hello world Form</title>
 
-<form action="processForm" method="GET">
+<form action="processFormVersion-2.0" method="GET">
 	<input type="text" name="studentName" placeholder="Enter Your Name.." >
 	<input type="submit"  value="Enter">
 </form>
