@@ -19,13 +19,17 @@
 
 		<form:select path="country">
 		
-		<!-- keeping  selected value blank -->
-		 <form:option value="" >-- select country --</form:option>
 		
-			<form:option value="Brazil" label="Brazil" />
+ <form:options items="${ student.countryList}"/>
+  
+           <!-- keeping  selected value blank -->
+			<!-- 		<form:option value="" >-- select country --</form:option>
+	          <form:option value="Brazil" label="Brazil" />
 			<form:option value="France" >France</form:option>
 			<form:option value="India" label="India" />
-			<form:option value="Canda" label="Canda" />
+			<form:option value="Canda" label="Canda" />   -->
+
+
 		</form:select>
 
 		<input  type="submit" value ="Register">
