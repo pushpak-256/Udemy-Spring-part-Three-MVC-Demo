@@ -9,5 +9,7 @@
 <h2>Spring-MVC-Demo-Home Page</h2>
 
 <a href="hello/showForm">hello world form</a>
+<br>
+<a href="student/showForm">Student world form</a>
 </body>
 </html>
