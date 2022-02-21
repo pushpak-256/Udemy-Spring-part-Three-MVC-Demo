@@ -2,9 +2,8 @@ package com.pushpak.springdemo.mvc.Entities.pojo;
 
 public class Student {
 
-	public String firstName;
-	public String lastName;
-
+	public String firstName, lastName , country;
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -20,4 +19,14 @@ public class Student {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+	
 }

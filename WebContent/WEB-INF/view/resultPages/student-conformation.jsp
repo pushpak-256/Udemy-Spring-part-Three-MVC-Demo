@@ -7,10 +7,11 @@
 <title>student-confirmation</title>
 </head>
 
-Congratulations !!
-<strong> ${student.firstName} &nbsp; ${student.lastName} </strong> your
+Congratulations !! &nbsp;
+<strong> ${student.firstName} &nbsp; ${student.lastName}  &nbsp;</strong> your
 are confirmed.
-
+ <br>
+ Country of Origin : ${student.country} 
 <body>
 
 </body>

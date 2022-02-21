@@ -15,9 +15,20 @@
  First Name : <form:input path="firstName"/>
  <br> <br>
  Last Name : <form:input path="lastName"/>
- 
- <input  type="submit" value ="Register">
- 
+  <br> <br>
+
+		<form:select path="country">
+		
+		<!-- keeping  selected value blank -->
+		 <form:option value="" >-- select country --</form:option>
+		
+			<form:option value="Brazil" label="Brazil" />
+			<form:option value="France" >France</form:option>
+			<form:option value="India" label="India" />
+			<form:option value="Canda" label="Canda" />
+		</form:select>
+
+		<input  type="submit" value ="Register">
  </form:form>
 
 </body>
