@@ -9,31 +9,44 @@
 </head>
 
 <body>
+
+	<form:form action="processForm" modelAttribute="student">
  
- <form:form action="processForm" modelAttribute="student">
- 
- First Name : <form:input path="firstName"/>
- <br> <br>
- Last Name : <form:input path="lastName"/>
-  <br> <br>
+ First Name : <form:input path="firstName" />
+		<br>
+		<br>
+ Last Name : <form:input path="lastName" />
+		<br>
+		<br>
 
 		<form:select path="country">
-		
-		
- <form:options items="${ student.countryList}"/>
-  
-           <!-- keeping  selected value blank -->
+
+
+			<form:options items="${ student.countryList}" />
+
+			<!-- keeping  selected value blank -->
 			<!-- 		<form:option value="" >-- select country --</form:option>
 	          <form:option value="Brazil" label="Brazil" />
 			<form:option value="France" >France</form:option>
 			<form:option value="India" label="India" />
 			<form:option value="Canda" label="Canda" />   -->
 
-
 		</form:select>
 
-		<input  type="submit" value ="Register">
- </form:form>
+		<br>
+		<br>
+
+		<label>Favorite Languge :</label> &nbsp; &nbsp;
+   
+     JAVA<form:radiobutton path="favoriteLanguage" value="Java" /> &nbsp;
+    PYTHON<form:radiobutton path="favoriteLanguage" value="python" />&nbsp;
+    C++<form:radiobutton path="favoriteLanguage" value="c++" />&nbsp;
+            C#<form:radiobutton path="favoriteLanguage" value="c#" />&nbsp;
+
+ <br> <br>
+ 
+		<input type="submit" value="Register">
+	</form:form>
 
 </body>
 

@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Student {
 
-	public String firstName, lastName , country;
+	public String firstName, lastName , country,favoriteLanguage;
 	private Map <String, String > countryList ;
 	
 	public Student() {
@@ -43,6 +43,14 @@ public class Student {
 
 	public Map<String, String> getCountryList() {
 		return countryList;
+	}
+
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
 	}
 	
 	

@@ -10,8 +10,13 @@
 Congratulations !! &nbsp;
 <strong> ${student.firstName} &nbsp; ${student.lastName}  &nbsp;</strong> your
 are confirmed.
+
  <br>
  Country of Origin : ${student.country} 
+ 
+ <br>
+ Country of Origin : ${student.favoriteLanguage} 
+ 
 <body>
 
 </body>

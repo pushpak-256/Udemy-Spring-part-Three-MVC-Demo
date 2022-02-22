@@ -25,8 +25,11 @@ public class StudentController {
 
 	@RequestMapping("/processForm")
 	public String processForm(@ModelAttribute("student") Student student) {
+		
 		System.out.println(student.getFirstName() + "\t" + student.getLastName());
 		System.out.println("--"+student.getCountry().isEmpty()+"--");
+		System.out.println(student.getFavoriteLanguage()+"\n");
+		
 		return "resultPages/student-conformation";
 	}
 
