@@ -5,16 +5,29 @@ import java.util.Map;
 
 public class Student {
 
-	public String firstName, lastName , country,favoriteLanguage;
+	public String firstName, lastName , country, favoriteLanguage;
+	
 	private Map <String, String > countryList ;
+	private Map <String, String > languageList ;
+	
+	
 	
 	public Student() {
+		
  countryList = new HashMap<>();
+ languageList=new HashMap<>();
+ 
+ languageList.put( "JAVA","Java" );
+ languageList.put( "PYTHON","python" );
+ languageList.put( "CPP","c++" );
+ languageList.put( "C SHARP","c#" );
+ 
  countryList.put("","-- select country --");
  countryList.put("BR", "Brazil");
  countryList.put("IN", "India");
  countryList.put("CA", "Canda");
  countryList.put("DE", "Germany");
+ 
 	}
 	
 	public String getFirstName() {
@@ -44,6 +57,8 @@ public class Student {
 	public Map<String, String> getCountryList() {
 		return countryList;
 	}
+	
+	
 
 	public String getFavoriteLanguage() {
 		return favoriteLanguage;
@@ -52,7 +67,8 @@ public class Student {
 	public void setFavoriteLanguage(String favoriteLanguage) {
 		this.favoriteLanguage = favoriteLanguage;
 	}
-	
-	
-	
+
+	public Map<String, String> getLanguageList() {
+		return languageList;
+	}
 }

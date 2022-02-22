@@ -37,11 +37,13 @@
 		<br>
 
 		<label>Favorite Languge :</label> &nbsp; &nbsp;
+		
+		<form:radiobuttons path="favoriteLanguage" items="${student.languageList }"/>
    
-     JAVA<form:radiobutton path="favoriteLanguage" value="Java" /> &nbsp;
-    PYTHON<form:radiobutton path="favoriteLanguage" value="python" />&nbsp;
-    C++<form:radiobutton path="favoriteLanguage" value="c++" />&nbsp;
-            C#<form:radiobutton path="favoriteLanguage" value="c#" />&nbsp;
+<%--      JAVA<form:radiobutton path="favoriteLanguage" value="Java" /> &nbsp; --%>
+<%--     PYTHON<form:radiobutton path="favoriteLanguage" value="python" />&nbsp; --%>
+<%--     C++<form:radiobutton path="favoriteLanguage" value="c++" />&nbsp; --%>
+<%--             C#<form:radiobutton path="favoriteLanguage" value="c#" />&nbsp; --%>
 
  <br> <br>
  
