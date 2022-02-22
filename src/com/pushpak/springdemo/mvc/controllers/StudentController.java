@@ -1,5 +1,7 @@
 package com.pushpak.springdemo.mvc.controllers;
 
+import java.util.Arrays;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,11 +27,12 @@ public class StudentController {
 
 	@RequestMapping("/processForm")
 	public String processForm(@ModelAttribute("student") Student student) {
-		
+
 		System.out.println(student.getFirstName() + "\t" + student.getLastName());
-		System.out.println("--"+student.getCountry().isEmpty()+"--");
-		System.out.println(student.getFavoriteLanguage()+"\n");
-		
+		System.out.println("--" + student.getCountry().isEmpty() + "--");
+		System.out.println(student.getFavoriteLanguage());
+        System.out.println(Arrays.toString(student.getOs()) + "\n");
+        
 		return "resultPages/student-conformation";
 	}
 
