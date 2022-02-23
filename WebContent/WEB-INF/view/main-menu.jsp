@@ -10,6 +10,8 @@
 
 <a href="hello/showForm">hello world form</a>
 <br>
-<a href="student/showForm">Student world form</a>
+<a href="student/showForm">Student  form</a>
+<br>
+<a href="customer/showForm">customer  form</a>
 </body>
 </html>
