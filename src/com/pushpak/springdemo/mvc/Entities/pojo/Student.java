@@ -3,9 +3,23 @@ package com.pushpak.springdemo.mvc.Entities.pojo;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.springframework.beans.factory.annotation.Required;
+
 public class Student {
 
-	public String firstName, lastName, country, favoriteLanguage;
+	@NotNull(message="is required")
+	@Size(min=4,max=10,message="Enter String between 4 -10 chars")
+	public String firstName;
+	
+	public String lastName;
+	public String favoriteLanguage; 
+	
+	public String country;
+	
 	public String[] os;
 
 	private Map<String, String> countryList;

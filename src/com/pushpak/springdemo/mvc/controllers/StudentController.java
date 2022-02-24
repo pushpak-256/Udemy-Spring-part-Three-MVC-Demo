@@ -2,8 +2,14 @@ package com.pushpak.springdemo.mvc.controllers;
 
 import java.util.Arrays;
 
+import javax.validation.Valid;
+
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,6 +19,14 @@ import com.pushpak.springdemo.mvc.Entities.pojo.Student;
 @RequestMapping("/student")
 public class StudentController {
 
+	@InitBinder
+	public void doValidation(WebDataBinder binder) {
+		StringTrimmerEditor editor = new StringTrimmerEditor(true);
+		binder.registerCustomEditor(String.class,editor);
+		
+		
+	}
+	
 	@RequestMapping("/showForm")
 	public String showForm(Model theModel) {
 
@@ -26,14 +40,20 @@ public class StudentController {
 	}
 
 	@RequestMapping("/processForm")
-	public String processForm(@ModelAttribute("student") Student student) {
+	public String processForm(@Valid @ModelAttribute("student") Student student , BindingResult res) {
 
 		System.out.println(student.getFirstName() + "\t" + student.getLastName());
-		System.out.println("--" + student.getCountry().isEmpty() + "--");
+		if (student.getCountry() != null) {
+			System.out.println("--" + student.getCountry().isBlank() + "--");
+		} else
+			System.out.println("country is unselected");
 		System.out.println(student.getFavoriteLanguage());
-        System.out.println(Arrays.toString(student.getOs()) + "\n");
-        
-		return "resultPages/student-conformation";
+		System.out.println(Arrays.toString(student.getOs()) + "\n");
+
+		if (res.hasErrors()) {
+			return "userForms/student-form";
+		} else
+			return "resultPages/student-conformation";
 	}
 
 }

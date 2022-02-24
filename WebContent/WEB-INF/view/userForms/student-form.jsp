@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style >
+.error{color:red}
+</style>
 <meta charset="ISO-8859-1">
 <title>student-Registration-form</title>
 </head>
@@ -12,7 +15,7 @@
 
 	<form:form action="processForm" modelAttribute="student">
  
- First Name : <form:input path="firstName" />
+ First Name : <form:input path="firstName" /> <form:errors path="firstName" class="error"/>
 		<br>
 		<br>
  Last Name : <form:input path="lastName" />
