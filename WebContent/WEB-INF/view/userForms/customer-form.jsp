@@ -28,6 +28,13 @@
 						path="lastName" cssClass="error" /></td>
 			</tr>
 
+			<tr>
+				<td><form:label path="freePasses">Free Passes </form:label></td>
+				<td>
+				        <form:input path="freePasses" />
+				        <form:errors path="freePasses" cssClass="error" />
+				</td>
+			</tr>
 		</table>
 		<input type="submit" value="Enter" />
 
