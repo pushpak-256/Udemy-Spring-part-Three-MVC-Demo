@@ -35,6 +35,15 @@
 				        <form:errors path="freePasses" cssClass="error" />
 				</td>
 			</tr>
+			
+			<tr>
+				<td><form:label path="pinCode">Pin-Code</form:label></td>
+				<td>
+				        <form:input path="pinCode" />
+				        <form:errors path="pinCode" cssClass="error" />
+				</td>
+			</tr>
+			
 		</table>
 		<input type="submit" value="Enter" />
 

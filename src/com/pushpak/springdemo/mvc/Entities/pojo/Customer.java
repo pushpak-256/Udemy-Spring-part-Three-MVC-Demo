@@ -3,6 +3,7 @@ package com.pushpak.springdemo.mvc.Entities.pojo;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Customer {
@@ -16,6 +17,10 @@ public class Customer {
 	@Min(value=0, message="must be greater than or equal to 0")
 	@Max(value=10,message="can get 10 pass max")
 	private int freePasses;
+	
+	//regex for Indian PinCode.
+	@Pattern(regexp="^[1-9][0-9]{5}$",message="Enter Valid PIN-CODE")
+	private String pinCode;
 	
 	public String getFirstName() {
 		return firstName;
@@ -39,6 +44,14 @@ public class Customer {
 
 	public void setFreePasses(int freePasses) {
 		this.freePasses = freePasses;
+	}
+
+	public String getPinCode() {
+		return pinCode;
+	}
+
+	public void setPinCode(String pinCode) {
+		this.pinCode = pinCode;
 	}
 
 	

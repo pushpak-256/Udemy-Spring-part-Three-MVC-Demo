@@ -12,6 +12,8 @@
 Congratulations !! &nbsp;
 <strong> ${customer.firstName} &nbsp; ${customer.lastName} &nbsp;</strong>
 your are confirmed. &nbsp; &nbsp; Free Passes :  ${customer.freePasses}
+ <br>
+ Pin-Code : ${customer.pinCode}
 
 </body>
 </html>
