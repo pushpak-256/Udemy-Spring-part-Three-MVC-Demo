@@ -8,15 +8,17 @@ import javax.validation.constraints.Size;
 
 public class Customer {
 
+	
 	private String firstName;
 	
 	@NotNull(message=" is required")
 	@Size(min=4, message="Minumum length should be 4 ")
 	private String lastName;
 
+	@NotNull(message="is required")
 	@Min(value=0, message="must be greater than or equal to 0")
 	@Max(value=10,message="can get 10 pass max")
-	private int freePasses;
+	private Integer freePasses;
 	
 	//regex for Indian PinCode.
 	@Pattern(regexp="^[1-9][0-9]{5}$",message="Enter Valid PIN-CODE")
@@ -38,13 +40,6 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
-	public int getFreePasses() {
-		return freePasses;
-	}
-
-	public void setFreePasses(int freePasses) {
-		this.freePasses = freePasses;
-	}
 
 	public String getPinCode() {
 		return pinCode;
@@ -53,6 +48,15 @@ public class Customer {
 	public void setPinCode(String pinCode) {
 		this.pinCode = pinCode;
 	}
+
+	public Integer getFreePasses() {
+		return freePasses;
+	}
+
+	public void setFreePasses(Integer freePasses) {
+		this.freePasses = freePasses;
+	}
+	
 
 	
 }
