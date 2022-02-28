@@ -43,7 +43,15 @@
 				        <form:errors path="pinCode" cssClass="error" />
 				</td>
 			</tr>
-			
+
+		<tr>
+				<td><form:label path="courseCode">Course-Code</form:label></td>
+				<td>
+				        <form:input path="courseCode" />
+				        <form:errors path="courseCode" cssClass="error" />
+				</td>
+			</tr>
+
 		</table>
 		<input type="submit" value="Enter" />
 

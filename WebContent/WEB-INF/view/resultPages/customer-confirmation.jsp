@@ -14,6 +14,8 @@ Congratulations !! &nbsp;
 your are confirmed. &nbsp; &nbsp; Free Passes :  ${customer.freePasses}
  <br>
  Pin-Code : ${customer.pinCode}
-
+ <br>
+ Course-Code : ${customer.courseCode}
+ 
 </body>
 </html>

@@ -6,8 +6,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class Customer {
+import com.pushpak.springdemo.mvc.validation.CourseCode;
 
+public class Customer {
 	
 	private String firstName;
 	
@@ -23,6 +24,10 @@ public class Customer {
 	//regex for Indian PinCode.
 	@Pattern(regexp="^[1-9][0-9]{5}$",message="Enter Valid PIN-CODE")
 	private String pinCode;
+	
+	@NotNull(message="is required")
+	@CourseCode(value="LUV",message="invalid code, should start with LUV")
+	public String courseCode;
 	
 	public String getFirstName() {
 		return firstName;
@@ -55,6 +60,14 @@ public class Customer {
 
 	public void setFreePasses(Integer freePasses) {
 		this.freePasses = freePasses;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 	
 
