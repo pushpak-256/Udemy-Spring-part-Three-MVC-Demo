@@ -4,8 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style >
-.error{color:red}
+<style>
+.error {
+	color: red
+}
 </style>
 <meta charset="ISO-8859-1">
 <title>student-Registration-form</title>
@@ -15,7 +17,8 @@
 
 	<form:form action="processForm" modelAttribute="student">
  
- First Name : <form:input path="firstName" /> <form:errors path="firstName" class="error"/>
+ First Name : <form:input path="firstName" />
+		<form:errors path="firstName" class="error" />
 		<br>
 		<br>
  Last Name : <form:input path="lastName" />
@@ -52,6 +55,12 @@
 		<br>
 		<br>
 		<form:checkboxes path="os" items="${student.operationgSysList}" />
+		<br>
+		<br>
+
+		<form:label path="secretCode"> Secret Code : </form:label>
+		<form:input path="secretCode" />
+		<form:errors path="secretCode" class="error" />
 		<br>
 		<br>
 

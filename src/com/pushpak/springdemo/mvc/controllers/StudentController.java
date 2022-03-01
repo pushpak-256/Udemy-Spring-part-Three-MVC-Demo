@@ -50,6 +50,8 @@ public class StudentController {
 		System.out.println(student.getFavoriteLanguage());
 		System.out.println(Arrays.toString(student.getOs()) + "\n");
 
+		System.out.println("\n\n"+res+"\n\n");
+		
 		if (res.hasErrors()) {
 			return "userForms/student-form";
 		} else

@@ -16,7 +16,8 @@ your are confirmed.
 
 <br> Country of Origin : ${student.favoriteLanguage}
 
-
+<br>
+ secretCode : ${student.secretCode}
 <br>
 
 <label> Operationg systems: </label>

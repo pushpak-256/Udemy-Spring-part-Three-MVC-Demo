@@ -9,6 +9,9 @@ import javax.validation.constraints.Size;
 
 import org.springframework.beans.factory.annotation.Required;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class Student {
 
 	@NotNull(message="is required")
@@ -17,6 +20,8 @@ public class Student {
 	
 	public String lastName;
 	public String favoriteLanguage; 
+	
+	public Integer secretCode;
 	
 	public String country;
 	
@@ -102,4 +107,12 @@ public class Student {
 		return operationgSysList;
 	}
 
+	public Integer getSecretCode() {
+		return secretCode;
+	}
+
+	public void setSecretCode(Integer secretCode) {
+		this.secretCode = secretCode;
+	}
+	
 }
