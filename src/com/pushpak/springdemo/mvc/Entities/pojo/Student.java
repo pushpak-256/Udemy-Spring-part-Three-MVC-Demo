@@ -9,6 +9,8 @@ import javax.validation.constraints.Size;
 
 import org.springframework.beans.factory.annotation.Required;
 
+import com.pushpak.springdemo.mvc.validation.Alphabetic;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,7 +20,11 @@ public class Student {
 	@Size(min=4,max=10,message="Enter String between 4 -10 chars")
 	public String firstName;
 	
+	
+	@NotNull(message="is required")
+	@Alphabetic
 	public String lastName;
+	
 	public String favoriteLanguage; 
 	
 	public Integer secretCode;

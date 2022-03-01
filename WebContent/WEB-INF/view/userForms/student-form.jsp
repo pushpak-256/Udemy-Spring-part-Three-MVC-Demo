@@ -22,6 +22,7 @@
 		<br>
 		<br>
  Last Name : <form:input path="lastName" />
+ <form:errors path="lastName" class="error" />
 		<br>
 		<br>
 
